@@ -52,7 +52,7 @@ return [
             'prefix'   => '',
         ],
 
-        'mysql' => [
+      /*  'mysql' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'database'  => 'agenda',
@@ -63,7 +63,18 @@ return [
             'prefix'    => '',
             'strict'    => false,
         ],
-
+*/
+'mysql' => [
+            'driver'    => 'mysql',
+            'host'      => getenv(‘OPENSHIFT_MYSQL_DB_HOST’),
+            'database'  => 'agendaweb2016',
+            'username'  => 'adminVsITA6G',
+            'password'  => 'XrUGRK5DwSzn',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'strict'    => false,
+        ],
         'pgsql' => [
             'driver'   => 'pgsql',
             'host'     => env('DB_HOST', 'localhost'),
